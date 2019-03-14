@@ -4,15 +4,15 @@
 #             [<command> <command arg>*]
 #
 
-from __future__ import print_function
-
 import argparse
 import boto3
 import botocore
 import os
 import sys
-import aws_sudo.CommandParser
-from six.moves import configparser
+
+from __future__ import print_function
+from aws_sudo   import CommandParser
+from six.moves  import configparser
 
 
 def sudo(cmd_args):
