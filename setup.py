@@ -61,7 +61,7 @@ setup(
         'jmespath==0.9.*',
         'python-dateutil==2.5.*',
         's3transfer==0.1.*',
-        'six==1.10.*',
+        'six==1.11.*',
     ],
 
     # To provide executable scripts, use entry points in preference to the
