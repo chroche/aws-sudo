@@ -4,16 +4,15 @@
 #             [<command> <command arg>*]
 #
 
+from __future__ import print_function
+from aws_sudo   import CommandParser
+from six.moves  import configparser
+
 import argparse
 import boto3
 import botocore
 import os
 import sys
-
-from __future__ import print_function
-from aws_sudo   import CommandParser
-from six.moves  import configparser
-
 
 def sudo(cmd_args):
     profile_config = read_config(cmd_args.profile)
