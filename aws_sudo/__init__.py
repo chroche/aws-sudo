@@ -128,7 +128,7 @@ def get_credentials(profile_config):
         return {
             'AccessKeyId': profile_config['aws_access_key_id'],
             'SecretAccessKey': profile_config['aws_secret_access_key'],
-            'SessionToken': ''
+            'SessionToken': profile_config.get('aws_session_token') or ''
         }
 
 
