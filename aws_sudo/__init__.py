@@ -134,10 +134,10 @@ def get_credentials(profile_config):
 
 
 def get_session(profile_config):
-    session_profile = profile_config['profile_name']
-
     if 'source_profile' in profile_config:
-        session_profile = profile_config['source_profile']
+        session_profile = profile_config['source_profile'] or None
+    else:
+        session_profile = profile_config['profile_name']
 
     if 'region' in profile_config:
         os.putenv('AWS_DEFAULT_REGION', profile_config['region'])
@@ -146,9 +146,7 @@ def get_session(profile_config):
     # Create a session using profile or EC2 Instance Role
     # To use Instance Role set `source_profile` to empty string in aws profile
     # configuration file
-    session = boto3.Session(profile_name=session_profile)
-
-    return session
+    return boto3.Session(profile_name=session_profile)
 
 
 def login_with_mfa(session, profile_config):
