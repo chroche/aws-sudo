@@ -13,7 +13,7 @@ else:
 
 setup(
     name='aws-sudo',
-    version='1.0.4',
+    version='1.1.0',
 
     description='sudo but with AWS accounts',
     long_description=long_description,
