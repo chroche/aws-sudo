@@ -36,7 +36,7 @@ upload: $(VENV)
 	# python setup.py sdist upload -r pypi
 
 lint: $(VENV)
-	pep8 aws_sudo/
+	pycodestyle aws_sudo/
 
 clean:
 	rm -rf .venv
