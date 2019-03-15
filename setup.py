@@ -55,12 +55,12 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     install_requires=[
-        'boto3<1.4.4', # boto3 >= 1.4.4 requires botocore 1.5
-        'botocore==1.4.*',
+        'boto3==1.9.*',
+        'botocore==1.12.*',
         'docutils==0.14.*',
         'jmespath==0.9.*',
-        'python-dateutil==2.5.*',
-        's3transfer==0.1.*',
+        'python-dateutil==2.8.*',
+        's3transfer==0.2.*',
         'six==1.11.*',
     ],
 
