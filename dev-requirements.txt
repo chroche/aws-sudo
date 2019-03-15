@@ -1,4 +1,4 @@
-pep8
+pycodestyle
 twine
 unittest2
 pyotp
